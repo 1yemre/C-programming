@@ -3,64 +3,70 @@
 
 int main()
 {
-/*
-int sayi;
-int i=1,sonuc=1;
+    /*
+  //1) yýldýzlar ile þekil hesaplamak
+   int sayi;
+   int i,j;
+   printf("sayi : ");
+   scanf("%d",&sayi);
 
-printf("Faktoriyeli Hesaplamak istdiginiz sayiyi giriniz : ");
-scanf("%d",&sayi);
 
+   for(i=1;i<=sayi;i++){
+        for(j=1;j<=i;j++){
 
-if(sayi<0){
-    printf("sadece pozitif sayilar giriniz");
- }
-  else{
-        while(i<=sayi)
-        {
-         sonuc=sonuc*i;
-         i++;
+             printf("*");
 
         }
-printf("%d fakoriyel = %d",sayi,sonuc);
 
-  }
+printf("\n");
+   }
+printf("\n\n");
+   int sayi;
+   int i,j;
+   printf("sayi : ");
+   scanf("%d",&sayi);
+
+
+   for(i=1;i<=sayi;i++){
+        for(j=1;j<=i;j++){
+
+             printf("*");
+
+        }
+
+printf("\n");
+   }
+*/
+//2)arstrong sayý  hesaplama
+//370=3*3*3+7*7*7+0*0*0=370
+
 
 
 int s1;
+int gecici_sayi;
 int sonuc=0;
-int i=1;
+int x;
 
 
-printf("lutfen bir adet sayi giriniz : ");
+printf("sayi :");
 scanf("%d",&s1);
 
 
-while(i<=s1){
-    sonuc=sonuc+i;
-    i++;
-}
-printf("%d ye kadar olan sayilarin toplami : %d",s1,sonuc);
+gecici_sayi=s1;
 
-*/
-
-
-int s1,s2;
-int sonuc=0;
-int i=1;
+for(gecici_sayi;gecici_sayi>0;gecici_sayi/=10)
+    {
+       x=gecici_sayi%10;
+        sonuc+=(x*x*x);
+        x=0;
 
 
-printf("lutfen iki  adet sayi giriniz : ");
-scanf("%d%d",&s1,&s2);
-
-
-
-while(s1<=s2){
-    sonuc+=s1;
-    s1++;
-}
-printf("sonuc : %d",sonuc);
-
-
-
+    }
+    if(sonuc==s1){
+        printf("Armstron sayidir");
+    }
+    else{
+        printf("Degil");
+    }
 
 }
